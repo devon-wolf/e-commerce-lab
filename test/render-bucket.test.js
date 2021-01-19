@@ -7,7 +7,7 @@ test('time to test a function', (expect) => {
         id: 1,
         name: 'The Wail Pail',
         image: 'wail-pail.jpg',
-        description: 'placeholder description',
+        description: 'A bucket to hold your tears.',
         category: 'self-help',
         price: 35
     };
