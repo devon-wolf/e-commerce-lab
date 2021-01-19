@@ -1,0 +1,23 @@
+.product-list {
+	list-style: none;
+}
+
+.product-entry {
+	border: solid 2px black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: min-content;
+	padding: 1rem;
+}
+
+.product-entry img {
+	width: 150px;
+	height: 150px;
+}
+
+.price {
+	font-weight: bold;
+	color: midnightblue;
+}

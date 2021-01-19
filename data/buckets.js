@@ -1,10 +1,10 @@
 const wailPail = {
     id: 1,
     name: 'The Wail Pail',
-    image: '',
+    image: 'wail-pail.jpg',
     description: 'placeholder description',
     category: 'self-help',
-    price: 0
+    price: 35
 };
 
 const mailPail = {
