@@ -2,7 +2,7 @@ const wailPail = {
     id: 1,
     name: 'The Wail Pail',
     image: 'wail-pail.jpg',
-    description: 'placeholder description',
+    description: 'A bucket to hold your tears.',
     category: 'self-help',
     price: 35
 };
@@ -10,46 +10,46 @@ const wailPail = {
 const mailPail = {
     id: 2,
     name: 'The Mail Pail',
-    image: '',
-    description: 'placeholder description',
+    image: 'mail-pail.jpg',
+    description: 'A bucket for documents.',
     category: 'logistics',
-    price: 0
+    price: 45
 };
 
 const snailPail = {
     id: 3,
     name: 'The Snail Pail',
-    image: '',
-    description: 'placeholder description',
+    image: 'snail-pail.jpg',
+    description: 'A bucket for snail collection.',
     category: 'culinary',
-    price: 0
+    price: 30
 };
 
 const rucket = {
     id: 4,
     name: 'The Rucket',
-    image: '',
-    description: 'placeholder description',
+    image: 'rucket.jpg',
+    description: 'Like a rucksack, but a bucket.',
     category: 'utility',
-    price: 0
+    price: 60
 };
 
 const mucket = {
     id: 5,
     name: 'The Mucket',
-    image: '',
-    description: 'placeholder description',
+    image: 'mucket.jpg',
+    description: 'An ordinary looking bucket, for muck.',
     category: 'agricultural',
-    price: 0
+    price: 25
 };
 
 const trucket = {
     id: 6,
     name: 'The Trucket',
-    image: '',
-    description: 'placeholder description',
+    image: 'trucket.jpg',
+    description: 'A big bucket with wheels.',
     category: 'oversized',
-    price: 0
+    price: 750
 };
 
 const buckets = [
