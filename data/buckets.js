@@ -20,9 +20,9 @@ const snailPail = {
     id: 3,
     name: 'The Snail Pail',
     image: 'snail-pail.jpg',
-    description: 'A bucket for snail collection.',
+    description: 'A set of buckets for snail collection.',
     category: 'culinary',
-    price: 30
+    price: 40
 };
 
 const rucket = {

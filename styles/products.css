@@ -1,20 +1,37 @@
 .product-list {
 	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .product-entry {
-	border: solid 2px black;
+	background-color: aliceblue;
+	border-radius: 10px;
+	border: solid 1.5px midnightblue;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: min-content;
-	padding: 1rem;
+	padding: 1.5rem;
+	margin: .5rem;
 }
 
+.product-entry h3 {
+	margin-top: 0;
+	color: midnightblue;
+	background-color: rgba(47, 79, 79, 0.2);
+	padding: 10px;
+	border-radius: 10px;
+}
 .product-entry img {
 	width: 150px;
 	height: 150px;
+	border: 2px groove midnightblue;
+}
+
+.product-entry p {
+	margin: .25rem;
 }
 
 .price {
