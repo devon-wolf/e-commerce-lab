@@ -4,3 +4,11 @@ export function findByID(id, array) {
     }
     return null;
 }
+
+export function calcItemTotal(item) {
+
+}
+
+export function calcOrderTotal(array) {
+	
+}
