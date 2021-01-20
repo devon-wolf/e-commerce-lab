@@ -7,7 +7,7 @@ export function renderBucket(bucket) {
     li.append(h3);
 
     const img = document.createElement('img');
-    img.src = `./assets/${bucket.image}`;
+    img.src = `../assets/${bucket.image}`;
     li.append(img);
 
     const pDescription = document.createElement('p');
