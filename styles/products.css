@@ -5,9 +5,9 @@
 }
 
 .product-entry {
-	background-color: aliceblue;
+	background-color: rgba(240, 248, 255, 0.6);
 	border-radius: 10px;
-	border: solid 1.5px midnightblue;
+	border: solid 2px darkslategray;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -24,10 +24,11 @@
 	padding: 10px;
 	border-radius: 10px;
 }
+
 .product-entry img {
 	width: 150px;
 	height: 150px;
-	border: 2px groove midnightblue;
+	border: 1px solid darkslategray;
 }
 
 .product-entry p {
