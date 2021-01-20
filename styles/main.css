@@ -48,5 +48,5 @@ main {
 	background-color: gainsboro;
 	padding: 1rem;
 	color: darkslategray;
-	height: 100%;
+	min-height: fit-content;
 }
