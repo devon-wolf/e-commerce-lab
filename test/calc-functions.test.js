@@ -4,6 +4,21 @@ import {
 } from '../utils.js';
 
 const test = QUnit.test;
+	
+const cart = [
+    {
+        id: 1,
+        quantity: 1
+    },
+    {
+        id: 2,
+        quantity: 3
+    },
+    {
+        id: 5,
+        quantity: 10
+    }
+];
 
 test('It should take a cart item with an ID of 5 and quantity of 10 and return 250.00', (expect) => {
     const expected = 250.00;
