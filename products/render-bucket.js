@@ -23,7 +23,7 @@ export function renderBucket(bucket) {
     addButton.value = bucket.id;
     addButton.textContent = 'Add to cart';
 
-    addButton.addEventListener('click', () => addToCart(bucket));
+    addButton.addEventListener('click', () => addToCart(bucket.id));
 
     li.append(h3, img, pDescription, pPrice, addButton);
     return li;

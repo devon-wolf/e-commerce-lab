@@ -1,15 +1,49 @@
-import {
-    calcItemTotal,
-    calcOrderTotal
-} from './cart-utils.js';
+import { findByID } from '../utils.js';
 
-const emptyCart = '[]';
-const cartInLocalStorage = localStorage.getItem('CART') || emptyCart;
-const cart = JSON.parse(cartInLocalStorage);
-const stringifiedCart = JSON.stringify(cart);
-const dataToLocalStorage = localStorage.setItem('CART', stringifiedCart);
+const CART = 'CART';
+const emptyCart = [];
 
-export function addToCart(item) {
-    console.log(`someone added ${item.name}`);
-    console.log(cart);
+export function getCart() {
+    const stringyCart = localStorage.getItem(CART);
+
+    if (stringyCart) {
+        const parsedCart = JSON.parse(stringyCart);
+		
+        return parsedCart;
+    }
+    else {
+        const stringyEmptyCart = JSON.stringify(emptyCart);
+        localStorage.setItem(CART, stringyEmptyCart);
+
+        return emptyCart;
+    }
+}
+
+export function setCart(cart) {
+    const stringyCart = JSON.stringify(cart);
+    localStorage.setItem(CART, stringyCart);
+}
+
+export function addToCart(id) {
+    const cart = getCart();
+    const cartItem = findByID(id, cart);
+
+    if (cartItem) {
+        cartItem.quantity++;
+    }
+    else {
+        const newItem = {
+            id: id,
+            quantity: 1
+        };
+		
+        cart.push(newItem);
+    }
+
+    setCart(cart);
+}
+
+export function clearCart() {
+    const stringyEmptyCart = JSON.stringify(emptyCart);
+    localStorage.setItem(CART, stringyEmptyCart);
 }
