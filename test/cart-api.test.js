@@ -28,13 +28,26 @@ test('It should get the correct cart from localStorage', (expect) => {
 });
 
 // test setCart
-// test('', (expect) => {
-//     const expected = 
-    
-//     const actual = 
+test('It should correctly set the cart in localStorage', (expect) => {
+    const testCart = [
+        {
+            id: 2,
+            quantity: 1
+        },
+        {
+            id: 5,
+            quantity: 3
+        }
+    ];
+	
+    setCart(testCart);
+	
+    const expected = JSON.stringify(testCart);
+	
+    const actual = localStorage.getItem('CART');
 
-//     expect.equal(actual, expected);
-// });
+    expect.equal(actual, expected);
+});
 
 // // test clearCart
 // test('', (expect) => {
