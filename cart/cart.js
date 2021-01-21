@@ -1,8 +1,11 @@
-import cart from '../data/cart-data.js';
+// import cart from '../data/cart-data.js';
 import {
     renderTableRow,
     renderTotalRow
 } from './render-utils.js';
+import { getCart } from './cart-api.js';
+
+const cart = getCart();
 
 const table = document.querySelector('tbody');
 const tableFooter = document.querySelector('tfoot');
