@@ -1,3 +1,5 @@
+import { addToCart } from '../cart/cart-api.js';
+
 export function renderBucket(bucket) {
     const li = document.createElement('li');
     li.classList.add('product-entry');
@@ -21,11 +23,8 @@ export function renderBucket(bucket) {
     addButton.value = bucket.id;
     addButton.textContent = 'Add to cart';
 
-    addButton.addEventListener('click', () => {
-        console.log(`someone added ${bucket.name}`);
-    });
+    addButton.addEventListener('click', () => addToCart(bucket));
 
     li.append(h3, img, pDescription, pPrice, addButton);
     return li;
-
 }
