@@ -1,0 +1,41 @@
+main {
+	height: 100%;
+}
+
+.cart {
+	
+	height: 80%;
+	padding: 1rem;
+	margin: 1rem;
+	display: grid;
+	grid-template-rows: min-content 1fr;
+	row-gap: 1rem;
+}
+
+.cart h2 {
+	margin: 0;
+}
+
+table {
+	text-align: right;
+}
+
+thead {
+	background-color: darkslategray;
+	color: gainsboro;
+	text-align: left;
+}
+
+td {
+	padding: .5rem;
+	
+	border-bottom: dotted 2px lightslategray;
+}
+
+tfoot {
+	font-weight: bold;
+}
+
+tfoot td {
+	border: none;
+}

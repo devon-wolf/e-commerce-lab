@@ -30,10 +30,9 @@ export function renderTotalRow(cart) {
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
 
-    td1.textContent = 'Total:';
-    td1.style.fontStyle = 'italic';
+    td2.textContent = 'Total:';
+    td2.style.fontStyle = 'italic';
     td3.textContent = `$${calcOrderTotal(cart).toFixed(2)}`;
-    td3.style.fontWeight = 'bold';
 
     tr.append(td1, td2, td3);
     return tr;
