@@ -1,4 +1,4 @@
-import { renderTableRow } from '../cart/render-table-row.js';
+import { renderTableRow } from '../cart/render-utils.js';
 
 const test = QUnit.test;
 

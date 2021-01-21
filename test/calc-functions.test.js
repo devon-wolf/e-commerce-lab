@@ -1,7 +1,7 @@
 import {
     calcItemTotal,
     calcOrderTotal
-} from '../utils.js';
+} from '../cart/cart-utils.js';
 
 const test = QUnit.test;
 	
