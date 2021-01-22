@@ -1,0 +1,11 @@
+label {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1rem;
+}
+
+label:hover {
+	color: rgb(115, 196, 35);
+	font-weight: bold;
+}
