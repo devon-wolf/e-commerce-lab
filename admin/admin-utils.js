@@ -7,3 +7,7 @@ export function addProduct(product) {
     products.push(product);
     localStorage.setItem(PRODUCTS, JSON.stringify(products));
 }
+
+export function submitProductForm() {
+	
+}
