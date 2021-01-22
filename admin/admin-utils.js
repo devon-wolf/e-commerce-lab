@@ -23,4 +23,6 @@ export function submitProductForm(form) {
     console.log(product); // success
 	
     addProduct(product);
+	
+    form.reset();
 }
