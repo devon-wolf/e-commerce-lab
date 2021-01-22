@@ -23,15 +23,16 @@ export function clearCart() {
     localStorage.setItem(CART, JSON.stringify(emptyCart));
 }
 
-export function addToCart(id) {
+export function addToCart(id, input) {
     const cart = getCart();
     const cartItem = findByID(id, cart);
+    const addQuantity = input;
 
     if (cartItem) {
-        cartItem.quantity++;
+        cartItem.quantity += addQuantity;
     }
-    else {
-        cart.push({ id: id, quantity: 1 });
+    else if (addQuantity > 0) {
+        cart.push({ id: id, quantity: addQuantity });
     }
 
     setCart(cart);

@@ -5,7 +5,6 @@
 }
 
 .product-entry {
-	background-color: rgba(240, 248, 255, 0.6);
 	border-radius: 10px;
 	border: solid 2px darkslategray;
 	display: flex;
@@ -19,7 +18,7 @@
 
 .product-entry h3 {
 	margin-top: 0;
-	color: midnightblue;
+	color: rgb(26, 26, 59);
 	background-color: rgba(47, 79, 79, 0.2);
 	padding: 10px;
 	border-radius: 10px;
@@ -28,7 +27,7 @@
 .product-entry img {
 	width: 150px;
 	height: 150px;
-	border: 1px solid darkslategray;
+	border: 2px solid darkslategray;
 }
 
 .product-entry p {
@@ -37,5 +36,14 @@
 
 .price {
 	font-weight: bold;
-	color: midnightblue;
+	color: rgb(26, 26, 59);
+}
+
+.add-items {
+	display: grid;
+	grid-template-columns: 2rem 1fr;
+	column-gap: 5px;
+	height: 1rem;
+	width: 150px;
+	margin-bottom: 1rem;
 }

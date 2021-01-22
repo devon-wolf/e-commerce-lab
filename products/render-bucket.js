@@ -22,20 +22,31 @@ export function renderBucket(bucket) {
     pPrice.classList.add('price');
     pPrice.textContent = `$${bucket.price}`;
     
-    const pQuantity = document.createElement('p');
-    pQuantity.classList.add('quantity');
-    
+    const addItemDiv = document.createElement('div');
+    addItemDiv.classList.add('add-items');
+
+    const quantityInput = document.createElement('input');
+    quantityInput.type = 'number';
+    quantityInput.classList.add('add-quantity');
+
     const addButton = document.createElement('button');
     addButton.classList.add('add-button');
     addButton.value = bucket.id;
     addButton.textContent = 'Add to cart';
 
+    addItemDiv.append(quantityInput, addButton);
+
+    const pQuantity = document.createElement('p');
+    pQuantity.classList.add('quantity');
+
     addButton.addEventListener('click', () => {
-        addToCart(bucket.id);
+        const addQuantity = quantityInput.valueAsNumber;
+
+        addToCart(bucket.id, addQuantity);
         renderQuantity(bucket.id, pQuantity);
     });
 
-    li.append(h3, img, pDescription, pPrice, addButton, pQuantity);
+    li.append(h3, img, pDescription, pPrice, addItemDiv, pQuantity);
 
     return li;
 }
