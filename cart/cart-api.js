@@ -6,27 +6,21 @@ const emptyCart = [];
 export function getCart() {
     const stringyCart = localStorage.getItem(CART);
 
-    if (stringyCart) {
-        const parsedCart = JSON.parse(stringyCart);
-		
-        return parsedCart;
+    if (stringyCart) {		
+        return JSON.parse(stringyCart);
     }
     else {
-        const stringyEmptyCart = JSON.stringify(emptyCart);
-        localStorage.setItem(CART, stringyEmptyCart);
-
+        localStorage.setItem(CART, JSON.stringify(emptyCart));
         return emptyCart;
     }
 }
 
 export function setCart(cart) {
-    const stringyCart = JSON.stringify(cart);
-    localStorage.setItem(CART, stringyCart);
+    localStorage.setItem(CART, JSON.stringify(cart));
 }
 
 export function clearCart() {
-    const stringyEmptyCart = JSON.stringify(emptyCart);
-    localStorage.setItem(CART, stringyEmptyCart);
+    localStorage.setItem(CART, JSON.stringify(emptyCart));
 }
 
 export function addToCart(id) {
@@ -37,12 +31,7 @@ export function addToCart(id) {
         cartItem.quantity++;
     }
     else {
-        const newItem = {
-            id: id,
-            quantity: 1
-        };
-		
-        cart.push(newItem);
+        cart.push({ id: id, quantity: 1 });
     }
 
     setCart(cart);
