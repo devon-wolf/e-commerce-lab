@@ -7,4 +7,3 @@ const bucketSeeds = buckets;
 export function seedAndGetProducts() {
     return getOrSeed(PRODUCTS, bucketSeeds);
 }
-
