@@ -13,6 +13,7 @@ body {
 	font-family: monospace;
 	display: flex;
 	flex-direction: column;
+	background-color: gainsboro;
 }
 
 header {
@@ -47,9 +48,10 @@ h1 {
 }
 
 main {
-	background-color: gainsboro;
 	padding: 1rem;
 	color: darkslategray;
-	min-height: fit-content;
+	width: 100%;
 	height: 100%;
+	border: solid 1px black;
+	display: flex;
 }
