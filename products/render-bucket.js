@@ -27,6 +27,7 @@ export function renderBucket(bucket) {
 
     const quantityInput = document.createElement('input');
     quantityInput.type = 'number';
+    quantityInput.value = '1';
     quantityInput.classList.add('add-quantity');
 
     const addButton = document.createElement('button');
@@ -41,7 +42,6 @@ export function renderBucket(bucket) {
 
     addButton.addEventListener('click', () => {
         const addQuantity = quantityInput.valueAsNumber;
-
         addToCart(bucket.id, addQuantity);
         renderQuantity(bucket.id, pQuantity);
     });

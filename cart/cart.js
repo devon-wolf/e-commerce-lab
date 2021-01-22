@@ -33,5 +33,4 @@ orderButton.addEventListener('click', () => {
     // redirect
         window.location.replace('../');
     }
-    
 });

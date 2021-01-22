@@ -52,6 +52,5 @@ main {
 	color: darkslategray;
 	width: 100%;
 	height: 100%;
-	border: solid 1px black;
 	display: flex;
 }
