@@ -4,3 +4,15 @@ export function findByID(id, array) {
     }
     return null;
 }
+
+export function getOrSeed(key, seedData) {
+    const stringyData = localStorage.getItem(key);
+
+    if (stringyData) {
+        return JSON.parse(stringyData);
+    }
+    else {
+        localStorage.setItem(key, JSON.stringify(seedData));
+        return seedData;
+    }
+}

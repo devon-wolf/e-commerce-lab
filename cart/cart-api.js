@@ -1,18 +1,13 @@
-import { findByID } from '../utils.js';
+import {
+    findByID,
+    getOrSeed
+} from '../utils.js';
 
 const CART = 'CART';
 const emptyCart = [];
 
 export function getCart() {
-    const stringyCart = localStorage.getItem(CART);
-
-    if (stringyCart) {		
-        return JSON.parse(stringyCart);
-    }
-    else {
-        localStorage.setItem(CART, JSON.stringify(emptyCart));
-        return emptyCart;
-    }
+    return getOrSeed(CART, emptyCart);
 }
 
 export function setCart(cart) {

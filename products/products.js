@@ -1,6 +1,7 @@
+import { seedAndGetProducts } from './product-storage.js';
 import { renderBucket } from './render-bucket.js';
-import buckets from '../data/buckets.js';
 
+const buckets = seedAndGetProducts();
 const productDisplay = document.getElementById('bucket-bucket');
 
 for (let bucket of buckets) {
