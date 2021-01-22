@@ -1,5 +1,7 @@
-import buckets from '../data/buckets.js';
+import { seedAndGetProducts } from '../products/product-storage.js';
 import { findByID } from '../utils.js';
+
+const buckets = seedAndGetProducts();
 
 export function calcItemTotal(cartItem) {
     const itemPrice = findByID(cartItem.id, buckets).price;
