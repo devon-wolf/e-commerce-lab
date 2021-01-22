@@ -1,4 +1,8 @@
-import { addToCart } from '../cart/cart-api.js';
+import {
+    addToCart,
+    getCart
+} from '../cart/cart-api.js';
+import { findByID } from '../utils.js';
 
 export function renderBucket(bucket) {
     const li = document.createElement('li');
@@ -17,14 +21,29 @@ export function renderBucket(bucket) {
     const pPrice = document.createElement('p');
     pPrice.classList.add('price');
     pPrice.textContent = `$${bucket.price}`;
-
+    
+    const pQuantity = document.createElement('p');
+    pQuantity.classList.add('quantity');
+    
     const addButton = document.createElement('button');
     addButton.classList.add('add-button');
     addButton.value = bucket.id;
     addButton.textContent = 'Add to cart';
 
-    addButton.addEventListener('click', () => addToCart(bucket.id));
+    addButton.addEventListener('click', () => {
+        addToCart(bucket.id);
+        renderQuantity(bucket.id, pQuantity);
+    });
 
-    li.append(h3, img, pDescription, pPrice, addButton);
+    li.append(h3, img, pDescription, pPrice, addButton, pQuantity);
+
     return li;
+}
+
+function renderQuantity(id, field) {
+    const cart = getCart();
+    const cartItem = findByID(id, cart);
+    const quantityInCart = cartItem.quantity;
+
+    field.textContent = `In your bucket: ${quantityInCart}`;
 }
