@@ -24,7 +24,8 @@ const totalRow = renderTotalRow(cart);
 tableFooter.append(totalRow);
 
 orderButton.addEventListener('click', () => {
-    alert('Nice. You got some buckets.');
+    const cartSummary = JSON.stringify(cart, true, 2);
+    alert(`Nice. You got some buckets. See if you can understand this nonsense:\n${cartSummary}`);
     clearCart();
     // redirect
     window.location.replace('../');
