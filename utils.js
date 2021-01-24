@@ -21,6 +21,14 @@ export function identifyStoredItem(id, getter) {
     const storedArray = getter;
     return findByID(id, storedArray);
 }
+
+export function removeObject(item, array) {
+    const arrayItem = findByID(item.id, array);
+    const targetIndex = array.indexOf(arrayItem);
+    array.splice(targetIndex, 1);
+    return array;
+}
+
 // export function generateNewID(array) {
     // assign an ID to new items instead of relying on user input
 // }

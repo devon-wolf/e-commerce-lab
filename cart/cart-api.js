@@ -1,6 +1,8 @@
 import {
     findByID,
-    getOrSeed
+    getOrSeed,
+    identifyStoredItem,
+    removeObject
 } from '../utils.js';
 
 const CART = 'CART';
@@ -33,6 +35,17 @@ export function addToCart(id, input) {
     setCart(cart);
 }
 
-// export function removeFromCart(id) {
-//     const cart = getCart();
-//
+// in process
+export function removeOneFromCart(id) {
+    const cart = getCart();
+    const cartItem = findByID(id, cart);
+
+    if (cartItem) {
+        cartItem.quantity--;
+        if (cartItem.quantity < 1) {
+            removeObject(cartItem, cart);
+        }
+    }
+
+    setCart(cart); // or something else, depending on if cart mutates
+}

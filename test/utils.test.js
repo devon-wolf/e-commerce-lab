@@ -1,4 +1,4 @@
-import { findByID, identifyStoredItem } from '../utils.js';
+import { findByID, identifyStoredItem, removeObject } from '../utils.js';
 import { getCart, setCart } from '../cart/cart-api.js';
 
 const test = QUnit.test;
@@ -158,6 +158,40 @@ test('It should correctly identify an item stored with setCart and retrieved wit
         id: 5,
         quantity: 3
     };
+
+    expect.deepEqual(actual, expected);
+});
+
+// test removeObject
+test('It should take in an array of objects, remove the target object, and return the array without that object.', (expect) => {
+    const cart = [
+        {
+            id: 2,
+            quantity: 1
+        },
+        {
+            id: 5,
+            quantity: 3
+        },
+        {
+            id: 1,
+            quantity: 4
+        }
+    ];
+
+
+    const actual = removeObject({ id: 5, quantity: 3 }, cart);
+
+    const expected = [
+        {
+            id: 2,
+            quantity: 1
+        },
+        {
+            id: 1,
+            quantity: 4
+        }
+    ];
 
     expect.deepEqual(actual, expected);
 });
