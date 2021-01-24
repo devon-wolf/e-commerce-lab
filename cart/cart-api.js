@@ -32,3 +32,7 @@ export function addToCart(id, input) {
 
     setCart(cart);
 }
+
+// export function removeFromCart(id) {
+//     const cart = getCart();
+//

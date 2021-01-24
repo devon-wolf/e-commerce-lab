@@ -16,3 +16,11 @@ export function getOrSeed(key, seedData) {
         return seedData;
     }
 }
+
+export function identifyStoredItem(id, getter) {
+    const storedArray = getter;
+    return findByID(id, storedArray);
+}
+// export function generateNewID(array) {
+    // assign an ID to new items instead of relying on user input
+// }
