@@ -34,7 +34,6 @@ export function addToCart(id, input) {
     setCart(cart);
 }
 
-// in process
 export function removeOneFromCart(id) {
     const cart = getCart();
     const cartItem = findByID(id, cart);

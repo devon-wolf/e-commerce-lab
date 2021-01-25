@@ -1,6 +1,6 @@
 import { seedAndGetProducts } from '../products/product-storage.js';
 import { findByID } from '../utils.js';
-import { removeOneFromCart, getCart } from './cart-api.js';
+import { removeOneFromCart, getCart, addToCart } from './cart-api.js';
 import {
     calcItemTotal,
     calcOrderTotal
@@ -29,15 +29,15 @@ export function renderTableRow(cartItem) {
     removeButton.textContent = '-';
     addButton.textContent = '+';
 
-    // currently works live in localStorage but doesn't render live, requires refresh
     removeButton.addEventListener('click', () => {
-        console.log('someone clicked -');
         removeOneFromCart(cartItem.id);
         renderCartUpdates(cartItem.id, tr, quantityTD, priceTD);
     });
 
     addButton.addEventListener('click', () => {
         console.log('someone clicked +');
+        addToCart(cartItem.id, 1);
+        renderCartUpdates(cartItem.id, tr, quantityTD, priceTD);
     });
 
     tr.append(nameTD, quantityTD, priceTD, actionTD);
