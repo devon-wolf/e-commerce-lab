@@ -178,10 +178,7 @@ test('It should take in an array of objects, remove the target object, and retur
             quantity: 4
         }
     ];
-
-
     const actual = removeObject({ id: 5, quantity: 3 }, cart);
-
     const expected = [
         {
             id: 2,
@@ -192,6 +189,5 @@ test('It should take in an array of objects, remove the target object, and retur
             quantity: 4
         }
     ];
-
     expect.deepEqual(actual, expected);
 });

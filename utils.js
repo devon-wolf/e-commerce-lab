@@ -17,16 +17,17 @@ export function getOrSeed(key, seedData) {
     }
 }
 
-export function identifyStoredItem(id, getter) {
-    const storedArray = getter;
-    return findByID(id, storedArray);
-}
-
 export function removeObject(item, array) {
     const arrayItem = findByID(item.id, array);
     const targetIndex = array.indexOf(arrayItem);
     array.splice(targetIndex, 1);
     return array;
+}
+
+// this function turned out pretty pointless! but it's here and tested so I'll leave it
+export function identifyStoredItem(id, getter) {
+    const storedArray = getter;
+    return findByID(id, storedArray);
 }
 
 // export function generateNewID(array) {

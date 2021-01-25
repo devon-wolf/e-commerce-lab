@@ -44,6 +44,5 @@ export function removeOneFromCart(id) {
             removeObject(cartItem, cart);
         }
     }
-
     setCart(cart);
 }

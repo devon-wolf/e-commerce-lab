@@ -35,7 +35,6 @@ export function renderTableRow(cartItem) {
     });
 
     addButton.addEventListener('click', () => {
-        console.log('someone clicked +');
         addToCart(cartItem.id, 1);
         renderCartUpdates(cartItem.id, tr, quantityTD, priceTD);
     });
@@ -48,9 +47,11 @@ export function renderTableRow(cartItem) {
 function renderCartUpdates(id, itemRow, quantityField, priceField) {
     const cart = getCart();
     const cartItem = findByID(id, cart);
+    const totalField = document.getElementById('order-total');
 
     if (!cartItem) {
         itemRow.remove();
+        totalField.textContent = `$${calcOrderTotal(cart).toFixed(2)}`;
         return;
     }
 
@@ -63,6 +64,8 @@ export function renderTotalRow(cart) {
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
+
+    td3.id = 'order-total';
 
     td2.textContent = 'Total:';
     td2.style.fontStyle = 'italic';
