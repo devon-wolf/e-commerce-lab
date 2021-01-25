@@ -1,7 +1,6 @@
 import {
     findByID,
     getOrSeed,
-    identifyStoredItem,
     removeObject
 } from '../utils.js';
 
@@ -47,5 +46,5 @@ export function removeOneFromCart(id) {
         }
     }
 
-    setCart(cart); // or something else, depending on if cart mutates
+    setCart(cart);
 }
