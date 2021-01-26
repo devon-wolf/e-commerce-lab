@@ -1,0 +1,19 @@
+.homepage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: xx-large;
+}
+
+a:link, a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(115, 196, 35);
+}
+
+a:active {
+	color: tomato;
+}

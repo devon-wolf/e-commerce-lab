@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <title>Bucketadmin</title>
+</head>
+
+<body>
+    <header>
+		<a href="../"><h1>THE BUCKET LIST</h1></a>
+		<a href="../products/">Bucketshop</a>
+		<a href="../cart/">Your Bucket</a>
+		<a href="./">Bucketadmin</a>
+    </header>
+    
+    <main>
+		<section class="form-section">
+			<h2>Add a New Bucket, Bucketmaster</h2>
+			<form id="add-new-bucket">
+				<label>
+					<span class="form-label">ID</span>
+					<input id="id" name="id" type="number">
+				</label>
+				<label>
+					<span class="form-label">Bucket name</span>
+					<input id="name" name="name">
+				</label>
+				<label>
+					<span class="form-label">Image</span>
+					<input id="image" name="image">
+				</label>
+				<label>
+					<span class="form-label">Description</span>
+					<input id="description" name="description">
+				</label>
+				<label>
+					<span class="form-label">Category</span>
+					<input id="category" name="category">
+				</label>
+				<label>
+					<span class="form-label">Price</span>
+					<input id="price" name="price" type="number">
+				</label>
+				<button id="submit-form">Submit</button>
+			</form>
+		</section>
+		<section class="product-section">
+			<h2>Current Products</h2>
+			<ul class="product-list" id="admin-products">
+				
+			</ul>
+		</section>
+    </main>
+
+    <script type="module" src="admin.js"></script>
+</body>
+
+</html>
